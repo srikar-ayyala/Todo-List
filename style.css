@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-light: #F8FFF8;
+    --color-mid: #80ED99;
+    --color-dark: #004100;
+    --color-dark-low-opacity: #00410011;
+    --color-accent-red: #CC5800;
+    --color-accent-blue: #0058CC;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--color-dark)
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.container {
+    max-width: 700px;
+    margin: 80px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+/* heading */
+
+.heading {
+    text-align: center;
+    border-bottom: 5px solid var(--color-dark);
+}
+
+/* task input second */
+
+.add-task-box {
+    display: flex;
+    gap: 16px;
+}
+
+#add-task-txt {
+    width: 100%;
+    font-size: 1.2rem;
+    padding-inline: 10px;
+    padding-block: 5px;
+
+    border: 0.5px solid var(--color-dark);
+    border-radius: 5px;
+
+    background-color: var(--color-light);
+}
+
+
+#add-task-button:hover {
+    color: var(--color-accent-blue);
+    text-shadow: 1px 1px 1px var(--color-dark);
+}
+
+#add-task-button i {
+    font-size: 2rem;
+}
+
+/* task list section */
+
+.task-list {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task {
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.task:hover {
+    background-color: var(--color-dark-low-opacity);
+}
+
+.task p {
+    width: 100%;
+}
+
+.task .delete {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task .delete:hover {
+    color: var(--color-accent-red);
+    text-shadow: 1px 1px 1px var(--color-dark);
+}
+
+/* completed tasks */
+
+#completed-tasks .task {
+    background-color: var(--color-dark-low-opacity);
+}
+
+#completed-tasks .task p {
+    text-decoration: 3px solid line-through var(--color-dark);
+
+}
